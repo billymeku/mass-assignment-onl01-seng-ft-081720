@@ -22,8 +22,8 @@ weight:, handed:, complexion:, t_shirt_size:,wrist_size:, glove_size:, pant_leng
 end 
 
 
-def initilize(attributes)
-  
-end 
+def initialize(attributes)
+    attributes.each {|key, value| self.send(("#{key}="), value)}
+  end
 
 end
